@@ -47,7 +47,7 @@ int main()
 
     BasicMessage::ptr_t msg_in = BasicMessage::Create();
 
-    msg_in->Body("Le Minh Chanh");
+    msg_in->Body("Hello python process");
 
     channel->BasicPublish("", "alanqueue", msg_in);
 
