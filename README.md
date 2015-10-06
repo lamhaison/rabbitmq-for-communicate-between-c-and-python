@@ -10,17 +10,16 @@ service rabbitmq-server status
 //Turn on it when start up machine										
 chkconfig rabbitmq-server on											
 
-The second step, we will buidl lib for rabbimq client dev and write simple demo using c++ interact with rabbitmq
-
-BUILD LIBRARY FOR DEV IN C++
-Install Dependency
-yum install boost-devel
-sudo yum install openssl-devel
-Install rabbitqm-c
-wget https://codeload.github.com/alanxz/rabbitmq-c/tar.gz/v0.7.0
-tar xzvf rabbitmq-c-0.7.0.tar.gz
-cd rabbitmq-c-0.7.0
-mkdir build
+The second step, we will buidl lib for rabbimq client dev and write simple demo using c++ interact with rabbitmq	
+BUILD LIBRARY FOR DEV IN C++											
+//Install Dependency												
+yum install boost-devel												
+sudo yum install openssl-devel											
+//Install rabbitqm-c												
+wget https://codeload.github.com/alanxz/rabbitmq-c/tar.gz/v0.7.0						
+tar xzvf v0.7.0										
+cd rabbitmq-c-0.7.0														
+mkdir build													
 cd build
 cmake ..
 sudo cmake --build . --config Release --target install
