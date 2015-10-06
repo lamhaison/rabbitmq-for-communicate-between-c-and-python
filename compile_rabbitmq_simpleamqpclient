@@ -1,0 +1,20 @@
+##############     rabbitmq     #############################################################
+yum install boost-devel
+wget https://codeload.github.com/alanxz/rabbitmq-c/tar.gz/v0.7.0
+tar xzvf rabbitmq-c-0.7.0.tar.gz
+cd rabbitmq-c-0.7.0
+mkdir build
+cd build
+sudo yum install openssl-devel
+cmake ..
+sudo cmake --build . --config Release --target install
+cd ~/Downloads/
+wget https://github.com/alanxz/SimpleAmqpClient/archive/master.zip
+unzip master.z
+cd SimpleAmqpClient-master/
+mkdir simpleamqpclient-build
+cd simpleamqpclient-build
+cmake ..
+make
+make install
+# compile: g++ -W -Wall -Wextra -pedantic -lSimpleAmqpClient -std=c++11 simple_connect.cpp
