@@ -16,44 +16,44 @@ BUILD LIBRARY FOR DEV IN C++
 yum install boost-devel												
 sudo yum install openssl-devel											
 //Install rabbitqm-c												
-wget https://codeload.github.com/alanxz/rabbitmq-c/tar.gz/v0.7.0						
-tar xzvf v0.7.0										
-cd rabbitmq-c-0.7.0														
-mkdir build													
-cd build
-cmake ..
-sudo cmake --build . --config Release --target install
-Install SimpleAmqpClient
+wget https://codeload.github.com/alanxz/rabbitmq-c/tar.gz/v0.7.0					
+tar xzvf v0.7.0													
+cd rabbitmq-c-0.7.0																								
+mkdir build																						
+cd build												
+cmake ..												
+sudo cmake --build . --config Release --target install									
+//Install SimpleAmqpClient											
 cd ~/Downloads/
 wget https://github.com/alanxz/SimpleAmqpClient/archive/master.zip
-unzip master.z
-cd SimpleAmqpClient-master/
-mkdir simpleamqpclient-build
-cd simpleamqpclient-build
-cmake ..
-make
-make install
+unzip master.zip												
+cd SimpleAmqpClient-master/										
+mkdir simpleamqpclient-build										
+cd simpleamqpclient-build										
+cmake ..											
+make														
+make install												
 
-Build Source
-cd SimpleAmqpClient-master/examples
+//Build Source												
+cd SimpleAmqpClient-master/examples										
 
-change source: 
-from #include <SimpleAmqpClient.h> to #include <SimpleAmqpClient/SimpleAmqpClient.h>
-export export LD_LIBRARY_PATH=/usr/local/lib
+//change source: 											
+from #include <SimpleAmqpClient.h> to #include <SimpleAmqpClient/SimpleAmqpClient.h>				
+export export LD_LIBRARY_PATH=/usr/local/lib								
 	
 
-compile: g++ -W -Wall -Wextra -pedantic -lSimpleAmqpClient -std=c++11 simple_connect.cpp
+compile: g++ -W -Wall -Wextra -pedantic -lSimpleAmqpClient -std=c++11 simple_connect.cpp			
 
-using for python, this is very simple
-only just install pika lib. execute command line
-pip install pika
+using for python, this is very simple						
+only just install pika lib. execute command line					
+pip install pika								
 
 REF 
-https://github.com/alanxz/rabbitmq-c
-https://github.com/alanxz/SimpleAmqpClient
-https://www.rabbitmq.com/devtools.html
+https://github.com/alanxz/rabbitmq-c								
+https://github.com/alanxz/SimpleAmqpClient							
+https://www.rabbitmq.com/devtools.html							
 
-Run demo
-please read Describe about simple demo file to understand my demo
+Run demo											
+please read Describe about simple demo file to understand my demo						
 
-Thank your for watching!
+Thank your for watching!											
