@@ -2,11 +2,12 @@
 Using rabbitmq as message broker to communication betwen different language, c++ and python
 
 The first step, please install rabbimq-server and turn it on. In the my lab, i using fedora 21 64bit		
-yum install rabbitmq-server											
+yum install rabbitmq-server
+//Start rabbitmq-server												
 service rabbitmq-server start											
-check status of rabbitmq-server										
+//check status of rabbitmq-server										
 service rabbitmq-server status											
-Turn on it when start up machine										
+//Turn on it when start up machine										
 chkconfig rabbitmq-server on											
 
 The second step, we will buidl lib for rabbimq client dev and write simple demo using c++ interact with rabbitmq
